@@ -1,21 +1,25 @@
 class Solution {
  int arr[];
  int target;
+ int count;
     public int findTargetSumWays(int[] nums, int target) {
         
          this.arr=nums;
          this.target=target;
    int count=0;
         int sum=0;
-        Findways(0,0,);
+        Findways(0,0);
+        return this.count;
     }
-    private void Findways(int arr[], int cursum,int index){
-        if(index>=nums.length){
+    private void Findways(int cursum,int index){
+        if(index >= nums.length){
             if(cursum==target)
             this.count++;
-        }
+            return;
+        
 
         Findways(index+1 , cursum +1 ,arr[index]);
         Findways(index-1 , cursum =1 ,arr[index]);
+    }
     }
 }
