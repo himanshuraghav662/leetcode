@@ -1,12 +1,13 @@
 
 class Solution {
     public int firstMissingPositive(int[] nums) {
-        HashSet<Integer> list=new HashSet<Integer>;
-        for(int i=0;i<nums;i++)
+        HashSet<Integer> list=new HashSet<Integer>();
+        int i=0;
+        for(i=0;i<nums.length;i++)
         {
             list.add(nums[i]);
         }
-        for(int i=0;i<nums.length;i++)
+        for(i=0;i<nums.length;i++)
         {
             if(!list.contains(i+1))
             {
