@@ -1,0 +1,21 @@
+class Solution {
+
+    public int majorityElement(int[] nums) {
+      int mid;
+
+         Arrays.sort(nums);
+        int c = nums.length;
+        if(c%2==0){
+         mid=0+((0+c)/2);
+        }
+        else
+        {
+            mid=(0+((0+c)/2))+1;
+        }
+
+
+        //System.out.println(mid);
+      return(mid);
+    }
+
+}
