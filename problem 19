@@ -3,8 +3,8 @@ class Solution {
         if(head==null){
             return null;
         }
-         Listnode slow=head,fast=head;
-        wlile(n>0){
+         ListNode slow=head,fast=head;
+        while(n>0){
             fast=fast.next;
             n--;
         }
@@ -12,7 +12,7 @@ class Solution {
         {
             return head.next;
         }
-        while(fast.next!=NULL){
+        while(fast.next!=null){
             fast=fast.next;
             slow=slow.next;
         }
