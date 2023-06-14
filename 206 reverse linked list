@@ -1,0 +1,24 @@
+class Solution {
+  
+    public ListNode reverseList(ListNode head) {
+        ListNode ptr,loc;
+        int[] arr=new int[10000];
+        ptr=head;
+        loc=head;
+        int i=0;
+        while(ptr != null){
+            arr[i]=ptr.val;
+            ptr = ptr.next;
+         i++;    
+        }
+
+        while(loc != null){
+            i--;
+            loc.val=arr[i];
+            loc=loc.next;
+         
+        }
+   return head;
+    }
+ 
+}
