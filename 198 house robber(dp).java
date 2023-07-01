@@ -14,16 +14,12 @@ class Solution {
         return dp[n]= Math.max(inc,exc);
     }
         }
-   
-    public int rob(int[] nums,int [] dp) {
-       int [] dp =new int[nums.length];
+
+    public int rob(int[] nums) {
+        int[] dp =new int[nums.length];
     Arrays.fill(dp,-1);
       int n=nums.length-1;
         int ans=sol(nums,dp,n);
-        return ans;
-        
-        
-        
-        
+        return ans;     
     }
 }
