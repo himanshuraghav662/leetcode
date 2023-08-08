@@ -8,6 +8,6 @@ class Solution {
         head.next.next = head;
         //set head's next to be null...
         head.next = null;
-        return res;     // Return the reverse linked list...
+        return res;    
     }
 }
