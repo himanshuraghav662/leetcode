@@ -1,20 +1,13 @@
 class Solution {
     public int[] sortArray(int[] nums) {
-
-       int min=10000;
-        int k=0;
-        for(int j=0;j<nums.length-1;j++){
-        for(int i=j;i<nums.length-1;i++){
-            if(nums[i]<min){
-                min=nums[i];
-                k=i;
-            }
-           
+        PriorityQueue<Integer> min=new PriorityQueue<>();
+        for(int i=0;i<nums.length;i++){
+            min.add(nums[i]);
         }
-            int temp=nums[j];
-            nums[j]=nums[k];
-            nums[k]=temp;
-    }
+        for(int i=0;i<nums.length;i++){
+            nums[i]=min.peek();
+            min.remove();
+        }
         return nums;
-        }
+    }
 }
